@@ -3,16 +3,18 @@ import { FC } from 'react'
 interface IProps {
   open: boolean
   handleOpenDropdown: () => void
+  handleOpenSidebar: () => void
+  signOut: () => void
 }
 
 export const Navbar: FC<IProps> = (props) => {
-  const { open = false, handleOpenDropdown } = props
+  const { open = false, handleOpenDropdown, handleOpenSidebar, signOut } = props
 
   return (
     <nav className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div onClick={handleOpenSidebar} className="flex items-center lg:hidden">
             {/* Mobile menu button*/}
             <button
               type="button"
@@ -165,6 +167,7 @@ export const Navbar: FC<IProps> = (props) => {
                     role="menuitem"
                     tabIndex={-1}
                     id="user-menu-item-2"
+                    onClick={signOut}
                   >
                     Sign out
                   </a>

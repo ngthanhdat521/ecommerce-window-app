@@ -3,3 +3,5 @@ dist
 out
 .DS_Store
 *.log*
+dist_bk
+electron-app-win32-x64

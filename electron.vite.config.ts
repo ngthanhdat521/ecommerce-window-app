@@ -1,8 +1,6 @@
-import { join, resolve } from 'path'
+import { resolve } from 'path'
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import react from '@vitejs/plugin-react'
-
-console.log('testpath123', join(__dirname, './src/renderer/src/'));
 
 export default defineConfig({
   main: {

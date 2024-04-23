@@ -1,5 +1,9 @@
 import React, { FC } from "react";
 import { useParams } from 'react-router-dom';
+import product1 from  '../../assets/product-01.jpg';
+import product2 from  '../../assets/product-02.jpg';
+import product3 from  '../../assets/product-03.jpg';
+import product4 from  '../../assets/product-04.jpg';
 
 export const ProductDetailPage: FC = () => {
   const params = useParams();
@@ -58,7 +62,7 @@ export const ProductDetailPage: FC = () => {
         <div className="w-full mt-6 sm:px-6 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:px-8">
           <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg lg:block">
             <img
-              src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg"
+              src={product1}
               alt="Two each of gray, white, and black shirts laying flat."
               className="h-full w-full object-cover object-center"
             />
@@ -66,14 +70,14 @@ export const ProductDetailPage: FC = () => {
           <div className="lg:grid lg:grid-cols-1 lg:gap-y-8">
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
               <img
-                src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-02.jpg"
+                src={product2}
                 alt="Model wearing plain black basic tee."
                 className="h-full w-full object-cover object-center"
               />
             </div>
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
               <img
-                src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-03.jpg"
+                src={product3}
                 alt="Model wearing plain gray basic tee."
                 className="h-full w-full object-cover object-center"
               />
@@ -81,7 +85,7 @@ export const ProductDetailPage: FC = () => {
           </div>
           <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
             <img
-              src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-04.jpg"
+              src={product4}
               alt="Model wearing plain white basic tee."
               className="h-full w-full object-cover object-center"
             />
